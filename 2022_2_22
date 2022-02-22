@@ -1,0 +1,7 @@
+#include <stdio.h>
+//a warehouse used to fill the codes.
+int main()
+{
+	printf("Hello World\n");
+	return 0;
+}
