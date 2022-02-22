@@ -95,3 +95,30 @@ int main()
 	}
 	return 0;
 }
+____________________________________________________
+//switch语句的题目，求m和n的值。
+#include <stdio.h>
+int main()
+{
+	int n = 1;
+	int m = 2;
+	switch (n)
+	{
+	case 1:
+		n++;
+	case 2:
+		m++;
+		switch (n)
+		{
+		case 1:
+			n++;
+		case 2:
+			m++;
+		}
+	case 3:
+		m++;
+		n++;
+		printf("n=%d,m=%d\n", n, m);
+	}
+	return 0;
+}
