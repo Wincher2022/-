@@ -1,0 +1,31 @@
+#include <stdio.h>
+//getchar()的使用，把东西接受进去。
+int main()
+{
+	int ch = 0;
+	int ret = 0;
+	char password[20] = {0};
+	printf("请输入密码:>");
+	scanf("%s", password);
+	while ((ch = getchar()) != '\n')
+	{
+		;
+	}
+	printf("请确认(Y/N):>");
+	ret = getchar();
+	//getchar();
+	//ret = getchar();
+	if (ret == 'Y')
+	{
+		printf("确认成功\n");
+	}
+	else if(ret=='N')
+	{
+		printf("放弃确认\n");
+	}
+		else
+	{
+	printf("输入错误\n");
+	}
+	return 0;
+}
