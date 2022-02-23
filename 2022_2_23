@@ -29,3 +29,19 @@ int main()
 	}
 	return 0;
 }
+_______________________________________________________
+#include <stdio.h>
+int main()
+{
+	int ch = 0;
+	while ((ch = getchar()) != EOF)
+		//该代码是读取所有的字符
+	{
+		if (ch < '0' || ch>'9')
+			continue;
+		//如果是不属于0到9之间的字符，则终止代码。只能输出0到9之间的字符。
+		putchar(ch);
+		//putchar这个函数一定要有对象，否则代码不成立，从哪里输入就从putchar输出。
+	}
+	return 0;
+}
