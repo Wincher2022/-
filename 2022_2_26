@@ -1,0 +1,156 @@
+分数求和.
+#include <stdio.h>
+//求1/1-1/2+1/3+...-1/100的和.
+int main()
+{
+	int i = 0;
+	double sum = 0.0;
+	int flag = 1;
+	for (i = 1; i <= 100; i++)
+	{
+		sum += flag*1.0 / i;
+		flag = -flag;
+	}
+	printf("%lf\n", sum);
+	return 0;
+}
+____________________________________________
+#include <stdio.h>
+ //求1/1+1/2+...+1/100的和.
+int main()
+{
+	int i = 0;
+	double sum = 0.0;
+	for (i = 1; i <= 100; i++)
+	{
+		sum += 1.0 / i;
+	}
+	printf("%lf\n", sum);
+	return 0;
+}
+______________________________________
+#include <stdio.h>
+int main()
+{
+	int i = 0;
+	double sum = 0.0;
+	for (i = 1; i <= 100; i++)
+	{
+		sum += 1.0 / i;
+	}
+	printf("%lf\n", sum);
+	return 0;
+}
+________________________________________________
+#include <stdio.h>
+int main()
+{
+	int i = 0;
+	double sum = 0.0;
+	for (i = 1; i <= 100; i++)
+	{
+		sum += 1.0 / i;
+	}
+	printf("%lf\n", sum);
+	return 0;
+}
+________________________________________________________
+#include <stdio.h>
+int main()
+{
+	int i = 0;
+	double sum = 0.0;
+	for (i = 1; i <= 100; i++)
+	{
+		sum += 1.0 / i;
+	}
+	printf("%lf\n", sum);
+	return 0;
+}
+_____________________________________________________________
+#include <stdio.h>
+//找出1到100之间有多少个9.
+int main()
+{
+	int count = 0;
+	int i = 0;
+	for (i = 1; i <= 100; i++)
+		//代码打出来后，可以适当地进行优化。
+	{
+		if (i % 10 == 9)
+		{
+			printf("%d ", i);
+			count++;
+		}
+		if (i / 10 == 9)
+			//else if和if只有其中一个执行一次，但是两个if就会执行两次。
+		{
+			printf("%d ", i);
+			count++;
+		}
+	}
+	printf("\ncount=%d\n", count);
+	return 0;
+}
+___________________________________________
+#include <stdio.h>
+//求1！+2！+......+10！的代码。
+int main()
+{
+	int i = 0;
+	int ret = 1;//ret要从1开始，不然0乘什么都是0。
+	int n = 0;
+	int sum = 0;
+
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		ret = ret * i;
+		sum = sum + ret;
+	}
+	printf("%d", sum);
+	return 0;
+}
+____________________________________________
+#include <stdio.h>
+//求n！的代码。
+int main()
+{
+	int i = 0;
+	int ret = 1;
+	int n = 0;
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		ret = ret * i;
+	}
+	printf("%d", ret);
+	return 0;
+}
+_____________________________________________________
+#include <stdio.h>
+#include <math.h>
+//求100到200之间的素数。
+int main()
+{
+	int i = 0;
+	int j = 0;
+	int count = 0;
+	for (i = 101; i <= 200; i+=2)
+		//i+=2这种写法是对的，只是要搞清楚i到底是什么数，不要把不想要的数全都输进去了。
+		//用这种写法，赋初值的时候就要考虑i了。
+	{
+		for (j = 2; j <= sqrt(i); j++)
+		{
+			if (i % j == 0)
+				break;
+		}
+		if (j > sqrt(i))
+		{
+			printf("%d ", i);
+			count++;
+		}
+	}
+	printf("\ncount=%d\n", count);
+	return 0;
+}
