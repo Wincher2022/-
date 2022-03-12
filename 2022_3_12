@@ -1,3 +1,42 @@
+//给一个不多于5位的正整数，要求：1.求出它是几位数2.分别打印出每一位数字3.按逆序打印出各位数字
+#include <stdio.h>
+int funct(int n)
+{
+	static int count = 0;
+	//count一定要是静态变量，否则每次调用函数都会重新赋值。
+	if (n>=10)
+	{
+		count++;
+		n /= 10;
+		funct(n);
+	}
+	else if(n<10)
+	{
+		count++;
+		return count;
+	}
+}
+int fun(int n)
+{
+	if (n > 9)
+	{
+		
+		printf("%d", n % 10);
+		n /= 10;
+		fun(n);
+	}
+	else
+		return n;
+}
+  void main()
+{
+	  int n = 0;
+	  printf("请输入一个不多于5位的正整数:>\n");
+	  scanf("%d", &n);
+	  printf("%d", fun(n));
+	  printf("\n是%d位数字", funct(n));
+}
+___________________________________________
 #include <stdio.h>
 #include <math.h>
 #define N b*b - 4 * a * c
