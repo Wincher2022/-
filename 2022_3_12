@@ -1,3 +1,78 @@
+#include <stdio.h>
+#include <math.h>
+#define N b*b - 4 * a * c
+//定义一个变量时，前面是标识符，后面是标识符里面的内容，表达式也可以作为内容。
+//通过自定义常用标识符的方式可以便捷进行更改代码或是简化代码。
+void main()
+{
+	//求ax^2+bx+c=0的根，a,b,c由键盘输入。
+	int a, b, c, x1, x2;
+	printf("请输入a,b,c的值，用键盘隔开。\n");
+	scanf("%d,%d,%d", &a, &b, &c);
+	if ((N) > 0)
+	{
+		x1 = (-b + sqrt(N)) / (2 * a);
+		x2 = (-b - sqrt(N)) / (2 * a);
+		printf("该方程有两个不同的实根，x1=%d,x2=%d\n", x1, x2);
+	}
+	if ((N) == 0)
+	{
+		x1 = x2 = b / (-2 * a);
+		printf("给方程有两个相同的实根，x1=x2=%d\n", x1);
+	}
+	if ((N) < 0)
+	{
+		printf("该方程没有实根\n");
+	}
+}
+_____________________________________________
+#include <stdio.h>
+//输入四个整数，要求由大至小输出。
+void main()
+{
+	int a, b, c, d;
+	int tmp = 0;
+	printf("请输入四个整数，用逗号隔开。\n");
+	scanf("%d,%d,%d,%d", &a, &b, &c, &d);
+	if (a < b)
+	{
+		tmp = a;
+		a = b;
+		b = tmp;
+	}
+	if (a < c)
+	{
+		tmp = a;
+		a = c;
+		c = tmp;
+	}
+	if (a < d)
+	{
+		tmp = a;
+		a = d;
+		d = tmp;
+	}
+	if (b < c)
+	{
+		tmp = b;
+		b = c;
+		c = tmp;
+	}
+	if (b < d)
+	{
+		tmp = b;
+		b = d;
+		d = tmp;
+	}
+	if (c < d)
+	{
+		tmp = c;
+		c = d;
+		d = tmp;
+	}
+	printf("%d %d %d %d", a, b, c, d);
+}
+______________________________________
 //打印第n个斐波那契数列,用循环写。
 #include <stdio.h>
 int fun(int n)
