@@ -1,0 +1,87 @@
+求n!用递归思想
+#include <stdio.h>
+int fun(int n)
+{
+	if (n > 1)
+		return n * fun(n - 1);
+	else
+		return 1;
+}
+void main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	printf("%d", fun(n));
+}
+___________________________________________
+#include <stdio.h>
+int strlen(char* arr)
+{
+	if (*arr != '\0')
+		return 1 + strlen(arr + 1);
+	else
+		return 0;
+}
+void main()
+{
+	char arr[] = "bit";
+	printf("len=%d", strlen(arr));
+}
+_________________________________________
+#include <stdio.h>
+int strlen(char* n)
+{
+	if (*n != '\0')
+		return 1 + strlen(n + 1);
+	//同理（n+1）也是传送该数组的第（n+1）个元素。
+	else
+		return 0;
+}
+void main()
+{
+	char arr[] = "bit";
+	printf("%d", strlen(arr));
+	//数组传参，arr传过去第一个元素的地址。
+}
+____________________________________________
+#include <stdio.h>
+//*str存元素的地址，str存元素。arr传送该数组arr[]的首个元素的地址。如:fun(arr)。
+//arr是数组，数组传参，传送过去的不是整个数组，而是第一个元素的地址。
+int print(n)
+{
+	if (n > 9)
+	{
+		print(n / 10);
+	}
+	printf("%d ", n%10);
+	//模10是为了取个位上的数字。
+}
+void main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	print(n);
+}
+_________________________________
+#include <stdio.h>
+void main()
+{
+	int b =10;
+	int a =10;
+	int sum = 0;
+	sum = add(a, b);
+	printf("%d", sum);
+}
+int add(int x, int y)
+{
+	int z = 0;
+	z = x + y;
+	return z;
+}
+___________________________________
+#include <stdio.h>
+void main()
+{
+	printf("hehe\n");
+	main();
+}
