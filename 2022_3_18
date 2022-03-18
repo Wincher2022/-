@@ -1,3 +1,14 @@
+//整形提升
+#include <stdio.h>
+void main()
+{
+	char c = 1;
+	printf("%u\n", sizeof(c));
+	printf("%u\n", sizeof(+c));
+	//由于添加了"+"号这个运算符号，char类型变为int，进行了整形提升，储存空间发生了变化。
+	printf("%u\n", sizeof(!c));
+}
+__________________________________
 #include <stdio.h>
 #include <stdlib.h>
 //实现十进制转二进制。
