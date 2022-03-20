@@ -1,0 +1,13 @@
+#include <stdio.h>
+void main()
+{
+	int a = 0x11223344;
+	int* pa = &a;
+	char* pc = &a;
+	printf("%p\n", pa);
+	printf("%p\n", pa+1);
+	printf("%p\n", pc);
+	printf("%p\n", pc+1);
+	//指针的类型决定了指针加一后的大小。
+	//整型的访问空间是4个，字符型是1个。
+}
