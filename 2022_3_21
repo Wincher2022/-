@@ -1,6 +1,22 @@
 #include <stdio.h>
 void main()
 {
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int i = 0;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int* p = arr;
+	//p指向arr[]的首个元素的地址
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", *p);
+		p = p + 1;
+		//由于p是整型指针，p+1指向下一个数组元素。
+	}
+}
+_____________________________
+#include <stdio.h>
+void main()
+{
 	int a = 10;
 	int* pa = &a;
 	*pa= 20;
