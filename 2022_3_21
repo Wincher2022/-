@@ -1,4 +1,14 @@
 #include <stdio.h>
+void main()
+{
+	int a = 10;
+	int* pa = &a;
+	*pa= 20;
+	pa = NULL;//放还指针里面的值，用NULL，不能用小写字母，是不同的含义。
+	//pa不在指向a了。
+}
+________________________________
+#include <stdio.h>
 //输入月份判断，该月有几天。
 int main()
 {
