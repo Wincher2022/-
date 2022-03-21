@@ -1,0 +1,57 @@
+#include <stdio.h>
+//输入月份判断，该月有几天。
+int main()
+{
+	//一、三、五、七、八、十、十二月为大月,四、六、九、十一月为小月
+	int month=0;
+	printf("请输入要查找的月份，输入一个数字:>\n");
+	printf("input '-1' is a error\n");
+	while (month != -1)
+	{
+		scanf("%d", &month);
+		switch (month)
+		{
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			printf("该月有31天\n");
+			break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			printf("该月有30天\n");
+			break;
+		case 2:
+			printf("该月有28天\n");
+			break;
+		case -1:
+			break;
+		default:
+			printf("输入错误\n");
+			break;
+		}
+	}
+	return 0;
+}
+___________________________________
+#include <stdio.h>
+void main()
+{
+	int a[10] = { 0 };
+	int i = 0;
+	int* p = a;
+	for (i = 0; i <10; i++)
+		//如果存入的数据超过了数组的最大空间，那么就会栈溢出，指针也会成为野指针。
+		//如果i的值改为12，那么会发生指针越界。
+	{
+		*p = i;
+		p++;
+		//*p++=i;和上面的操作如出一辙。
+		//p++改变的是列，(p+1)改变的是行。
+	}
+}
