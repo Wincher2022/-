@@ -1,6 +1,27 @@
 #include <stdio.h>
 void main()
 {
+	printf("The size of short is %d bytes\n",sizeof(short));
+	printf("The size of int is %d bytes\n", sizeof(int));
+	printf("The size of long is %d bytes\n", sizeof(long));
+	printf("The size of long long is %d bytes\n", sizeof(long long));
+}
+____________________________
+#include <stdio.h>
+void main()
+{
+	printf("v   v\n v v \n  v  ");
+}
+____________________
+#include <stdio.h>
+void main()
+{
+	printf("practice makes perfect!");
+}
+_______________________
+#include <stdio.h>
+void main()
+{
 	int a = 10;
 	int b = 20;
 	int c = 30;
