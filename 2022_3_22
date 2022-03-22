@@ -1,4 +1,19 @@
 #include <stdio.h>
+void main()
+{
+	int a = 10;
+	int b = 20;
+	int c = 30;
+	int* arr[3] = { &a,&b,&c };
+	//指针数组，元素是整型指针;
+	int i;
+	for (i = 0; i < 3; i++)
+	{
+		printf("%d ", *(arr[i]));
+	}
+}
+____________________________
+#include <stdio.h>
 int my_strlen(char* str)
 {
 	char* start = str;
