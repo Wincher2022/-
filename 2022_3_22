@@ -1,0 +1,30 @@
+#include <stdio.h>
+int my_strlen(char* str)
+{
+	char* start = str;
+	char* end = str;
+	while (*end != '\0')
+	{
+		end++;
+	}
+	//字符串的大小是字符串长度加一，因为还有'\0';
+	return end - start;
+}
+void main()
+{
+	char arr[] = "bit hello";
+	int len = my_strlen(arr);
+	printf("%d\n", len);
+	printf("%d\n", sizeof(arr));
+	//sizeof的作用是返回一个对象或者类型所占的内存字节数;
+}
+_______________________
+#include <stdio.h>
+void main()
+{
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	&arr[9] - &arr[0];
+	printf("%d", &arr[0] - &arr[9]);
+	//数组地址相减的绝对值是相距的元素个数。
+	//指针相减要求指向同一数组。
+}
