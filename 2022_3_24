@@ -1,4 +1,25 @@
 #include <stdio.h>
+struct S
+{
+	int a;
+	char c;
+	char arr[20];
+	double d;
+};
+struct T
+{
+	char ch[10];
+	struct S s;
+	char* pc;
+};
+int main()
+{
+	char arr[] = "hello bit\n";
+	struct T t = { "hehe",{100,'w',"hello world",3.14},arr };
+	return 0;
+}
+________________________
+#include <stdio.h>
 typedef struct stu
 {
 	char name[20];
