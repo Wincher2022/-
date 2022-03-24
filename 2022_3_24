@@ -1,0 +1,14 @@
+#include <stdio.h>
+typedef struct stu
+{
+	char name[20];
+	short age;
+	char tele[12];
+	char sex[5];
+}stu;
+int main()
+{
+	stu s1 = { "张三",20,"15957786451","男" };
+	stu s2 = { "旺财",30,"15985665726","保密" };
+	return 0;
+}
