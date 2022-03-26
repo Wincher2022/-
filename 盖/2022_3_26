@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main()
+{
+	int a = 1;
+	//经调试，数据存储方式为小端模式;
+	// 如下:
+	//01 00 00 00
+	return 0;
+}
