@@ -1,4 +1,30 @@
 #include <stdio.h>
+//初始化一个数组，使其各个元素都为0;
+void init(int arr[], int sz)
+{
+	int i;
+	for (i = 0; i < sz; i++)
+	{
+		arr[i] = 0;
+	}
+}
+void print(int arr[], int sz)
+{
+	int i;
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
+void main()
+{
+	int arr[10] = { 0 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	init(arr, sz);
+	print(arr, sz);
+}
+___________________________
+#include <stdio.h>
 int main()
 {
 	int a = 1;
