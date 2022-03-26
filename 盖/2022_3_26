@@ -1,4 +1,23 @@
 #include <stdio.h>
+void main()
+{
+	int arr[] = { 1,2,3,4,5 };
+	short* p = (short*)arr;
+	int i;
+	for (i = 0; i < 4; i++)
+	{
+		*(p + i) = 0;
+		//short类型连续访问两个字节，而int一个元素占4个字节，所以该循环作用是使数组前两个元素
+		//变为0
+		//所以输出0 0 3 4 5
+	}
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
+_____________________________
+#include <stdio.h>
 //初始化一个数组，使其各个元素都为0;
 void init(int arr[], int sz)
 {
