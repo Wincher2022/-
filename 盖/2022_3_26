@@ -1,6 +1,20 @@
 #include <stdio.h>
 void main()
 {
+	int a = 0x11223344;
+	char* p = (char*)&a;
+	//内存存放十六进制
+	//指针p里面放的是44332211，一般是小端模式，低位放低地址，高位放高地址
+	//char类型占1个字节
+	*p = 0;
+	//内存里面存放的数字变为00332211
+	printf("%x", a);
+	//打印时还原，打印11223300
+}
+______________________________
+#include <stdio.h>
+void main()
+{
 	int arr[] = { 1,2,3,4,5 };
 	short* p = (short*)arr;
 	int i;
