@@ -1,3 +1,24 @@
+//求两个整数二进制中不同的位的个数
+#include <stdio.h>
+int in_bit(int num1,int num2)
+{
+	int count = 0;
+	int temp = num1 ^ num2;
+	while (temp)
+	{
+		temp = temp & (temp - 1);
+			count++;
+	}
+	return count;
+}
+void main()
+{
+	int num1, num2;
+	scanf("%d%d", &num1, &num2);
+	int count=in_bit(num1, num2);
+	printf("count=%d\n", count);
+}
+___________________________
 #include <stdio.h>
 #include <math.h>
 void main()
