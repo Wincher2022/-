@@ -1,4 +1,24 @@
 #include <stdio.h>
+#include <math.h>
+void main()
+{
+	int h = 0;
+	float x, y;
+	printf("请输入x,y的数值:>\n");
+	scanf("%f%f", &x, &y);
+	float a = pow((2 - fabs(x)), 2);
+	float b = pow((2 - fabs(y)), 2);
+	if (a + b <= 1)
+		h = 10;
+	else
+		h = 0;
+		printf("h=%d\n", h);
+		//逻辑错误比语法错误更难纠正，逻辑即思路，有时换一种思路就能写出正确的代码;
+		//可以把代码题改为数学问题进行解答，再用代码表达出来;
+		//数学是逻辑之重;
+}
+______________________________
+#include <stdio.h>
 //求一个整数的二进制中有多少个1;
 int count_bit(int a)
 {
