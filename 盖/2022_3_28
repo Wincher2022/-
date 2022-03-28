@@ -1,0 +1,45 @@
+//编写一个函数将十进制正整数转换为十六进制
+#include <stdio.h>
+void fun(int n)
+{
+	int y;
+	while (n)
+	{
+		y = n % 16;
+		if (y == 10)
+			printf("A");
+		else if(y==11)
+			printf("B");
+		else if (y == 12)
+			printf("C");
+		else if(y == 13)
+			printf("D");
+		else if (y == 14)
+			printf("E");
+		else if (y == 15)
+			printf("F");
+		else
+		printf("%d", y);
+			n=n / 16;
+	}
+}
+void main()
+{
+	int n;
+	
+	scanf("%d", &n);
+	fun(n);
+}
+_________________________
+#include <stdio.h>
+#include <math.h>
+#define PI 3.1415926
+//输出每隔十度的正弦函数值列表
+void main()
+{
+	int n;
+	for (n = 0; n < 180; n += 10)
+	{
+		printf("%.4lf\n", sin(n * PI / 180));
+	}
+}
