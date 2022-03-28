@@ -1,3 +1,21 @@
+//输入两个正整数m>n,输出输出这两个正整数间所有自然数之和
+#include <stdio.h>
+int fun(int m, int n)
+{
+	int sum = 0;
+	for (n=n+1; n < m; n++)
+	{
+		sum += n;
+	}
+	return sum;
+}
+void main()
+{
+	int m, n;
+	scanf("%d%d", &m, &n);
+	printf("%d\n",fun(m, n));
+}
+_____________________
 //编写一个函数将十进制正整数转换为十六进制
 #include <stdio.h>
 void fun(int n)
