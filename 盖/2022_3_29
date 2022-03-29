@@ -1,0 +1,22 @@
+#include <stdio.h>
+int fun(int m)
+{
+	if (m == 1)
+		return m;
+	else
+		m = m * fun(m - 1);
+	return m;
+}
+int main()
+{
+	int m, n,C;
+	m = 0;
+	n = 0;
+	C = 0;
+	printf("请输入m,n，m要大于n:>\n");
+	scanf("%d%d", &m, &n);
+	C = fun(m) / ((fun(n)) * fun(m - n));
+	//C4 2是6;
+	printf("%d\n", C);
+	return 0;
+}
