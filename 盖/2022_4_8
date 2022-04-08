@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main()
+{
+	int i;
+	for (i = 4; i > 0; i--)//控制行
+	{
+		for (int j = 4; j > 0; j--)
+			printf("*");
+		printf("\n");
+	}
+	return 0;
+}
+______________________
+#include <stdio.h>
+int main()
+{
+	int i;
+	for (i = 1; i<5; i++)
+	{
+		for (int j = 1; j<=5-i; j++)
+			printf("*");
+		printf("\n");
+	}
+	return 0;
+}
+_______________________
+#include <stdio.h>
+int main()
+{
+	int i,k;
+	for (i = 1; i <5; i++)
+	{
+		for (int j = 1; j <=i; j++)
+			printf(" ");
+		for (k=5-i; k > 0; k--)
+			printf("*");
+		printf("\n");
+	}
+	return 0;
+}
