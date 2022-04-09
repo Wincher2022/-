@@ -1,4 +1,24 @@
 #include <stdio.h>
+#include <math.h>
+int main()
+{
+	int n;
+	int i, j, k;
+	scanf("%d", &n);
+	if (n >= 100 && n <= 999)
+	{
+		i = n % 10;
+		j = n / 10 % 10;
+		k = n / 100 % 10;
+		if (n == pow(i, 3) + pow(j, 3) + pow(k, 3))
+			printf("YES");
+		else
+			printf("NO");
+	}
+	return 0;
+}
+_________________
+#include <stdio.h>
 int main()
 {
 	char ch;
