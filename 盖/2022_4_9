@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    char n;
+    scanf("%c", &n);
+    if (n >= 'A' && n <= 'Z')
+        printf("%d", n);
+    if (n >= 'a' && n <= 'z')
+        printf("%c", n - 32);
+    return 0;
+}
+___________________
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, a, b, c;
+    int p, S = 0;
+    int s1, s2;
+    scanf("%d", &n);
+    for (int i = n; i > 0; i--)
+    {
+        scanf("%d%d%d", &a, &b, &c);
+        p = (a + b + c) / 2;
+        S = sqrt(p * (p - a) * (p - b) * (p - c));
+        printf("%d\n",S);
+    }
+    
+    return 0;
+}
