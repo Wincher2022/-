@@ -1,6 +1,21 @@
 #include <stdio.h>
 int main()
 {
+	char ch;
+	char C;
+	ch=getchar();
+	if (ch >= 'A' && ch <= 'Z')
+		printf("前3位: %c;\n后3位: %c.", (ch - 'A' + 23) % 26 + 'A', (ch - 'A' + 3) % 26 + 'A');
+	else if(ch >= 'a' && ch <= 'z')
+		printf("前3位: %c;\n后3位: %c.", (ch - 'a' + 23) % 26 + 'a', (ch - 'a' + 3) % 26 + 'a');
+	else
+		printf("这不是字母");
+	return 0;
+}
+____________________
+#include <stdio.h>
+int main()
+{
     char n;
     scanf("%c", &n);
     if (n >= 'A' && n <= 'Z')
