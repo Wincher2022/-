@@ -1,4 +1,22 @@
 #include <stdio.h>
+int main()
+{
+	float x,result;
+	scanf("%f", &x);
+	if (x == 0)
+	{
+		result = 0;
+		printf("g(%.0f) = %.0f", x, result);
+	}
+	else
+	{
+		result = 1 / (2 * x);
+		printf("g(%.3f) = %.3f", x, result);
+	}
+	return 0;
+}
+_____________
+#include <stdio.h>
 #include <math.h>
 int main()
 {
