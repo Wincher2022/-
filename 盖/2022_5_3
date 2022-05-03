@@ -1,0 +1,63 @@
+//猜数字游戏是令游戏机随机产生一个100以内的正整数，
+//用户输入一个数对其进行猜测，需要你编写程序自动对其与随机产生的被猜数进行比较，
+//并提示大了（“Too big”）、小了（“Too small”），还是相等（“Lucky You!”）。如果猜到，则结束程序。如果超过7次都没有猜到，
+//则提示“Game Over!”，并结束程序。
+————————————————————————————————
+#include <stdio.h>
+int main()
+{
+    int n, number;
+    scanf("%d",&n);
+    int count = 0;
+    while (count < 7)
+    {
+        scanf("%d", &number);
+
+        if (number > n)
+            printf("Too big\n");
+        else if (number < n)
+            printf("Too small\n");
+        else
+        {
+            printf("Lucky You!\n");
+            break;
+        }
+        count++;
+    }
+    if (count == 7)
+        printf("Game Over!");
+    return 0;
+}
+————————————————————————————————————
+//本题要求编写程序，判断一个给定的整数是否为素数。
+//素数就是只能被1和自身整除的正整数，1不是素数，2是素数。
+#include <stdio.h>
+#include <math.h>
+int fun(int n)
+{
+    int i;
+    int result = 1;
+    if (n < 0)
+        return 0;
+    for (i = 2; i <= sqrt(n); i++)
+    {
+        if (n % i == 0)
+        {
+            result = 0;
+            break;
+        }
+    }
+    return result;
+}
+int main()
+{
+    int n;
+    int flag = 1;
+    scanf("%d", &n);
+    flag = fun(n);
+    if (flag == 1)
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
+}
