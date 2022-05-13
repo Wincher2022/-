@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main()
+{
+	int n = 0x41,x=123;
+	printf("%2d %2d", x,n);//当宽度小于实际宽度时，全部打印
+	//0dd是八进制数的意思，0xdd是十六进制的意思
+	return 0;
+}
+————————————————————————————
+#include <stdio.h>
+int main()
+{
+    int a = 5, b = 1, c = 6;
+    if (a = b + c)
+        printf("Equal!\n");
+    else
+        printf("Not Equal!\n");
+	return 0;
+}
