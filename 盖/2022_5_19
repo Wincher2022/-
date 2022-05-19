@@ -1,0 +1,24 @@
+//编写函数计算， sn=(1-1/2)+(1/3-1/4)+...+(1/(2n-1)-1/(2n))，sn作为函数值返回。
+#include <stdio.h>
+double add(int n);
+int main()
+{
+    int n;
+    double sum;
+    scanf("%d", &n);
+    sum = add(n);
+    printf("%.2f", sum);
+    return 0;
+}
+double add(int n)
+{
+    double sum = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        sum += (1.0 / (2 * i - 1));
+        sum += (-1) * (1.0 / (2 * i));
+
+
+    }
+    return sum;
+}
