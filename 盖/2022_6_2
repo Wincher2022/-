@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main()
+{
+    int n, a, c, d, count = 0;
+    scanf("%d", &n);
+    for (a = 0; a <=90; a++)
+    {
+        for (c = 0; c <= 225; c++)
+            {
+            d = n - a - c;
+                if (d % 2 != 0)
+                    continue;
+                    if (n == a*5 + c*2 + d/2)
+                        count++;
+            }
+    }
+    printf("%d", count);
+        return 0;
+}
